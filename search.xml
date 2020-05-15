@@ -3,12 +3,256 @@
   <entry>
     <title>童话的开始</title>
     <url>/2020/05/14/%E7%AB%A5%E8%AF%9D%E7%9A%84%E5%BC%80%E5%A7%8B/</url>
-    <content><![CDATA[<h2 id="欢迎来到童话世界"><a href="#欢迎来到童话世界" class="headerlink" title="欢迎来到童话世界"></a>欢迎来到童话世界</h2><pre><code>你将在这里收获许多，期待世界的丰富吧！</code></pre>]]></content>
+    <content><![CDATA[<h2 id="欢迎来到童话世界"><a href="#欢迎来到童话世界" class="headerlink" title="欢迎来到童话世界"></a>欢迎来到童话世界</h2><pre><code>你将在这里收获许多，期待世界的丰富吧！
+</code></pre>]]></content>
       <categories>
         <category>Init</category>
       </categories>
       <tags>
         <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>md编写规则</title>
+    <url>/2020/05/15/md%E7%BC%96%E5%86%99%E8%A7%84%E5%88%99/</url>
+    <content><![CDATA[<pre><code># 标题H1
+</code></pre><h1 id="标题H1"><a href="#标题H1" class="headerlink" title="标题H1"></a>标题H1</h1><pre><code>## 标题H2
+</code></pre><h2 id="标题H2"><a href="#标题H2" class="headerlink" title="标题H2"></a>标题H2</h2><pre><code>### 标题H3
+</code></pre><h3 id="标题H3"><a href="#标题H3" class="headerlink" title="标题H3"></a>标题H3</h3><pre><code>#### 标题H4
+</code></pre><h4 id="标题H4"><a href="#标题H4" class="headerlink" title="标题H4"></a>标题H4</h4><pre><code>##### 标题H5
+</code></pre><h5 id="标题H5"><a href="#标题H5" class="headerlink" title="标题H5"></a>标题H5</h5><pre><code>###### 标题H5
+</code></pre><h6 id="标题H5-1"><a href="#标题H5-1" class="headerlink" title="标题H5"></a>标题H5</h6><h3 id="字符效果和横线等"><a href="#字符效果和横线等" class="headerlink" title="字符效果和横线等"></a>字符效果和横线等</h3><pre><code>---- 横线
+</code></pre><hr>
+<pre><code>~~删除线~~
+</code></pre><p><del>删除线</del> <s>删除线（开启识别HTML标签时）</s></p>
+<pre><code>*斜体字*   或  _斜体字_
+</code></pre><p><em>斜体字</em>      <em>斜体字</em></p>
+<pre><code>**粗体**  __粗体__
+</code></pre><p><strong>粗体</strong>  <strong>粗体</strong></p>
+<pre><code>***粗斜体*** ___粗斜体___
+</code></pre><p><strong><em>粗斜体</em></strong> <strong><em>粗斜体</em></strong></p>
+<pre><code>上标：X&lt;sup&gt;2&lt;/sup&gt;，下标：O&lt;sub&gt;2&lt;/sub&gt;
+</code></pre><p>上标：X<sup>2</sup>，下标：O<sub>2</sub></p>
+<p><strong>缩写(同HTML的abbr标签)</strong></p>
+<blockquote>
+<p>即更长的单词或短语的缩写形式，前提是开启识别HTML标签时，已默认开启</p>
+</blockquote>
+<pre><code>&lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt;
+</code></pre><p><abbr title="Hyper Text Markup Language">HTML</abbr></p>
+<h3 id="引用-Blockquotes"><a href="#引用-Blockquotes" class="headerlink" title="引用 Blockquotes"></a>引用 Blockquotes</h3><pre><code>&gt; 引用文本 Blockquotes
+</code></pre><blockquote>
+<p>引用文本 Blockquotes</p>
+<p>引用：如果想要插入空白换行<code>即&lt;br /&gt;标签</code>，在插入处先键入两个以上的空格然后回车即可</p>
+</blockquote>
+<h3 id="锚点与链接-Links"><a href="#锚点与链接-Links" class="headerlink" title="锚点与链接 Links"></a>锚点与链接 Links</h3><pre><code>[普通链接](https://www.mdeditor.com/)
+</code></pre><p><a href="https://www.mdeditor.com/" target="_blank" rel="noopener">普通链接</a></p>
+<pre><code>[普通链接带标题](https://www.mdeditor.com/ &quot;普通链接带标题&quot;)
+</code></pre><p><a href="https://www.mdeditor.com/" target="_blank" rel="noopener" title="普通链接带标题">普通链接带标题</a></p>
+<pre><code>直接链接：&lt;https://www.mdeditor.com&gt;
+</code></pre><p>直接链接：<a href="https://www.mdeditor.com" target="_blank" rel="noopener">https://www.mdeditor.com</a></p>
+<p><del>[锚点链接][anchor-id]</del><br><del>[anchor-id]: <a href="https://www.mdeditor.com/" target="_blank" rel="noopener">https://www.mdeditor.com/</a></del></p>
+<pre><code>邮箱地址自动链接 test.test@gmail.com  www@vip.qq.com
+</code></pre><p>test.test@gmail.com    www@vip.qq.com</p>
+<pre><code>github自动链接 @pandao （hexo不适用）
+</code></pre><p><del>@pandao</del></p>
+<h3 id="多语言代码高亮-Codes"><a href="#多语言代码高亮-Codes" class="headerlink" title="多语言代码高亮 Codes"></a>多语言代码高亮 Codes</h3><h4 id="行内代码-Inline-code"><a href="#行内代码-Inline-code" class="headerlink" title="行内代码 Inline code"></a>行内代码 Inline code</h4><pre><code>执行命令：`npm install marked`
+</code></pre><p>执行命令：<code>npm install marked</code></p>
+<h4 id="缩进风格"><a href="#缩进风格" class="headerlink" title="缩进风格"></a>缩进风格</h4><p>即缩进四个空格，也做为实现类似 <code>&lt;pre&gt;</code> 预格式化文本 ( Preformatted Text ) 的功能。</p>
+<pre><code>&lt;?php
+    echo &quot;Hello world!&quot;;
+?&gt;
+</code></pre><p>预格式化文本：</p>
+<pre><code>| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+</code></pre><h4 id="JS代码"><a href="#JS代码" class="headerlink" title="JS代码"></a>JS代码</h4><pre><code>(```javascript) 注：实际使用无括号
+function test() {
+console.log(&quot;Hello world!&quot;);
+}
+(```)
+</code></pre><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">"Hello world!"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="HTML-代码-HTML-codes"><a href="#HTML-代码-HTML-codes" class="headerlink" title="HTML 代码 HTML codes"></a>HTML 代码 HTML codes</h4><pre><code>(```html) 注：实际使用无括号
+&lt;html&gt;&lt;/html&gt;
+(```)
+</code></pre><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">mate</span> <span class="attr">charest</span>=<span class="string">"utf-8"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"keywords"</span> <span class="attr">content</span>=<span class="string">"Editor.md, Markdown, Editor"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>Hello world!<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">body</span>&#123;<span class="attribute">font-size</span>:<span class="number">14px</span>;<span class="attribute">color</span>:<span class="number">#444</span>;<span class="attribute">font-family</span>: <span class="string">"Microsoft Yahei"</span>, Tahoma, <span class="string">"Hiragino Sans GB"</span>, Arial;<span class="attribute">background</span>:<span class="number">#fff</span>;&#125;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">ul</span>&#123;<span class="attribute">list-style</span>: none;&#125;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">img</span>&#123;<span class="attribute">border</span>:none;<span class="attribute">vertical-align</span>: middle;&#125;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">"text-xxl"</span>&gt;</span>Hello world!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"text-green"</span>&gt;</span>Plain text<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="图片-Images"><a href="#图片-Images" class="headerlink" title="图片 Images"></a>图片 Images</h3><p>图片加链接 (Image + Link)：</p>
+<pre><code>[![](/images/404.jpg)](/images/404.jpg &quot;404&quot;)
+</code></pre><p><a href="/images/404.jpg" title="404"><img src="/images/404.jpg" alt=""></a></p>
+<hr>
+<h3 id="列表-Lists"><a href="#列表-Lists" class="headerlink" title="列表 Lists"></a>列表 Lists</h3><h4 id="无序列表（减号）Unordered-Lists"><a href="#无序列表（减号）Unordered-Lists" class="headerlink" title="无序列表（减号）Unordered Lists (-)"></a>无序列表（减号）Unordered Lists (-)</h4><p><code>- 列表一</code></p>
+<ul>
+<li>列表一</li>
+</ul>
+<h4 id="无序列表（星号）Unordered-Lists"><a href="#无序列表（星号）Unordered-Lists" class="headerlink" title="无序列表（星号）Unordered Lists (*)"></a>无序列表（星号）Unordered Lists (*)</h4><p><code>* 列表一</code></p>
+<ul>
+<li>列表一</li>
+</ul>
+<h4 id="无序列表（加号和嵌套）Unordered-Lists"><a href="#无序列表（加号和嵌套）Unordered-Lists" class="headerlink" title="无序列表（加号和嵌套）Unordered Lists (+)"></a>无序列表（加号和嵌套）Unordered Lists (+)</h4><pre><code>+ 列表一
++ 列表二
+    + 列表二-1
++ 列表三
+    * 列表三-1
+</code></pre><ul>
+<li>列表一</li>
+<li>列表二<ul>
+<li>列表二-1</li>
+</ul>
+</li>
+<li>列表三<ul>
+<li>列表三-1</li>
+</ul>
+</li>
+</ul>
+<h4 id="有序列表-Ordered-Lists"><a href="#有序列表-Ordered-Lists" class="headerlink" title="有序列表 Ordered Lists (-)"></a>有序列表 Ordered Lists (-)</h4><pre><code>1. 第一行
+2. 第二行
+</code></pre><ol>
+<li>第一行</li>
+<li>第二行</li>
+</ol>
+<h4 id="GFM-task-list"><a href="#GFM-task-list" class="headerlink" title="GFM task list"></a>GFM task list</h4><pre><code>- [x] GFM task list 1
+- [ ] GFM task list 2
+    - [x] GFM task list 2-1
+- [ ] GFM task list 3
+    - [ ] GFM task list 3-1
+</code></pre><ul>
+<li>[x] GFM task list 1</li>
+<li>[ ] GFM task list 2<ul>
+<li>[x] GFM task list 2-1</li>
+</ul>
+</li>
+<li>[ ] GFM task list 3<ul>
+<li>[ ] GFM task list 3-1</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="绘制表格-Tables"><a href="#绘制表格-Tables" class="headerlink" title="绘制表格 Tables"></a>绘制表格 Tables</h3><pre><code>注：分割线有无‘:’都可，效果一样
+| 项目        | 价格    |  数量   |
+| --------   | -----:  | :----:  |
+| 计算机      | $1600   |   5    |
+| 手机        |   $12   |   12   |
+| 管线        |    $1   |  234   |
+</code></pre><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th style="text-align:right">价格</th>
+<th style="text-align:center">数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>计算机</td>
+<td style="text-align:right">$1600</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td>手机</td>
+<td style="text-align:right">$12</td>
+<td style="text-align:center">12</td>
+</tr>
+<tr>
+<td>管线</td>
+<td style="text-align:right">$1</td>
+<td style="text-align:center">234</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h4 id="特殊符号-HTML-Entities-Codes"><a href="#特殊符号-HTML-Entities-Codes" class="headerlink" title="特殊符号 HTML Entities Codes"></a>特殊符号 HTML Entities Codes</h4><pre><code>&amp;copy; &amp;  &amp;uml; &amp;trade; &amp;iexcl; &amp;pound;
+</code></pre><p>&copy; &amp;  &uml; &trade; &iexcl; &pound;</p>
+<pre><code>&amp;amp; &amp;lt; &amp;gt; &amp;yen; &amp;euro; &amp;reg; &amp;plusmn; &amp;para; &amp;sect; &amp;brvbar; &amp;macr; &amp;laquo; &amp;middot;
+</code></pre><p>&amp; &lt; &gt; &yen; &euro; &reg; &plusmn; &para; &sect; &brvbar; &macr; &laquo; &middot;</p>
+<pre><code>X&amp;sup2; Y&amp;sup3; &amp;frac34; &amp;frac14;  &amp;times;  &amp;divide;   &amp;raquo;
+</code></pre><p>X&sup2; Y&sup3; &frac34; &frac14;  &times;  &divide;   &raquo;</p>
+<pre><code>18&amp;ordm;C  &amp;quot;  &amp;apos;
+</code></pre><p>18&ordm;C  &quot;  &apos;</p>
+<h3 id="Emoji表情-smiley"><a href="#Emoji表情-smiley" class="headerlink" title="Emoji表情 :smiley:"></a>Emoji表情 :smiley:</h3><pre><code>暂不支持
+</code></pre><h4 id="反斜杠-Escape"><a href="#反斜杠-Escape" class="headerlink" title="反斜杠 Escape"></a>反斜杠 Escape</h4><pre><code>这里只是展示反斜杠的作用：\*literal asterisks\*
+</code></pre><p>*literal asterisks*</p>
+<h3 id="科学公式-TeX-KaTeX"><a href="#科学公式-TeX-KaTeX" class="headerlink" title="科学公式 TeX(KaTeX)"></a>科学公式 TeX(KaTeX)</h3><pre><code>$$E=mc^2$$
+</code></pre><script type="math/tex; mode=display">E=mc^2</script><pre><code>行内的公式$$E=mc^2$$行内的公式，行内的$$E=mc^2$$公式。
+</code></pre><p>行内的公式<script type="math/tex">E=mc^2</script>行内的公式，行内的<script type="math/tex">E=mc^2</script>公式。</p>
+<pre><code>$$x &gt; y$$
+</code></pre><script type="math/tex; mode=display">x > y</script><pre><code>$$(\sqrt{3x-1}+(1+x)^2)$$
+</code></pre><script type="math/tex; mode=display">(\sqrt{3x-1}+(1+x)^2)</script><pre><code>$$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$
+</code></pre><script type="math/tex; mode=display">\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))</script><p>多行公式：</p>
+<pre><code>$$
+\displaystyle
+\left( \sum\_{k=1}^n a\_k b\_k \right)^2
+\leq
+\left( \sum\_{k=1}^n a\_k^2 \right)
+\left( \sum\_{k=1}^n b\_k^2 \right)
+$$
+</code></pre><script type="math/tex; mode=display">
+\displaystyle
+\left( \sum\_{k=1}^n a\_k b\_k \right)^2
+\leq
+\left( \sum\_{k=1}^n a\_k^2 \right)
+\left( \sum\_{k=1}^n b\_k^2 \right)</script><pre><code>$$
+\displaystyle
+    \frac{1}{
+        \Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{
+        \frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {
+        1+\frac{e^{-6\pi}}
+        {1+\frac{e^{-8\pi}}
+         {1+\cdots} }
+        }
+    }
+$$
+</code></pre><script type="math/tex; mode=display">
+\displaystyle
+    \frac{1}{
+        \Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{
+        \frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {
+        1+\frac{e^{-6\pi}}
+        {1+\frac{e^{-8\pi}}
+         {1+\cdots} }
+        }
+    }</script><pre><code>$$
+f(x) = \int_{-\infty}^\infty
+    \hat f(\xi)\,e^{2 \pi i \xi x}
+    \,d\xi
+$$
+</code></pre><script type="math/tex; mode=display">
+f(x) = \int_{-\infty}^\infty
+    \hat f(\xi)\,e^{2 \pi i \xi x}
+    \,d\xi</script><h3 id="绘制流程图-Flowchart"><a href="#绘制流程图-Flowchart" class="headerlink" title="绘制流程图 Flowchart"></a>绘制流程图 Flowchart</h3><pre><code>(```)flow
+st=&gt;start: 用户登陆
+op=&gt;operation: 登陆操作
+cond=&gt;condition: 登陆成功 Yes or No?
+e=&gt;end: 进入后台
+st-&gt;op-&gt;cond
+cond(yes)-&gt;e
+cond(no)-&gt;op
+(```)
+</code></pre><div id="flowchart-0" class="flow-chart"></div>
+
+<h3 id="绘制序列图-Sequence-Diagram"><a href="#绘制序列图-Sequence-Diagram" class="headerlink" title="绘制序列图 Sequence Diagram"></a>绘制序列图 Sequence Diagram</h3><pre><code>(```)sequence
+Alice-&gt;Bob: Hello Bob, how are you?
+Note right of Bob: Bob thinks
+Bob--&gt;Alice: I am good thanks!
+(```)
+</code></pre><div id="sequence-0"></div>
+
+<h3 id="End"><a href="#End" class="headerlink" title="End"></a>End<script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">Alice->Bob: Hello Bob, how are you?
+Note right of Bob: Bob thinks
+Bob-->Alice: I am good thanks!</textarea><textarea id="sequence-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 用户登陆
+op=>operation: 登陆操作
+cond=>condition: 登陆成功 Yes or No?
+e=>end: 进入后台
+
+st->op->cond
+cond(yes)->e
+cond(no)->op</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></h3>]]></content>
+      <categories>
+        <category>Init</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
       </tags>
   </entry>
 </search>
