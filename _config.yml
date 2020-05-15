@@ -107,3 +107,26 @@ search:
   field: post
   format: html
   limit: 10000
+
+# markdown:
+#   render:
+#     # 控制 Markdown 渲染引擎是否转义文档中出现的 html 标签，默认为 false ，
+#     # 这里要设置为 true，否则回导致 <!--more--> 渲染失败。
+#     xhtmlOut: false
+#     html: true  
+#     breaks: true
+#     linkify: true
+#     typographer: true
+#     quotes: '“”‘’'
+#   plugins:
+#     - markdown-it-footnote
+#     - markdown-it-sup
+#     - markdown-it-sub
+#     - markdown-it-abbr
+#     - markdown-it-emoji
+#   anchors:
+#     level: 2
+#     collisionSuffix: 'v'
+#     permalink: true
+#     permalinkClass: header-anchor
+#     permalinkSymbol: 
