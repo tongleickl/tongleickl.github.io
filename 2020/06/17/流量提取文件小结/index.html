@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="童话世界">
 <meta property="og:description" content="流量提取文件本来标题想写流量还原的，但是百度谷歌都没有搜到相关的定义（可能是太菜了吧：），所以还是换成了这个，也不知道是谁告诉我的流量还原，wdnmd。  什么是流量提取文件 carve data out of PCAPs说的俗一点（当然也是我水平太低），就是从传输文件&#x2F;其他内容的流量pcap包中提取出真实的文件来，并尽可能地获取到正确的文件名和文件后缀。当然这里的正确都是相对的，只能说是传输过程">
 <meta property="article:published_time" content="2020-06-17T13:46:33.000Z">
-<meta property="article:modified_time" content="2020-06-17T13:46:38.841Z">
+<meta property="article:modified_time" content="2020-06-19T13:44:26.000Z">
 <meta property="article:author" content="tongleickl">
 <meta property="article:tag" content="project, traffic restore">
 <meta name="twitter:card" content="summary">
@@ -458,8 +458,31 @@
 <li>通过github和一些博客，了解到了一些好用且相对成熟的开源项目和软件。<br>2.1 wireshark &amp; tshark 想必wireshark是耳熟能详的了，而tshark则是wireshark在linux上的cli工具（你不会在服务器上跑wireshark的GUI吧？）<br>2.2 networkminer 一个相当好用的工具，除了不能提取出http中下载的文件+只有windows平台+没有cli版本。<br>2.3 chaosreader 按照官方给的例子是挺好用的，但跑自己的流量文件就很多提取不出来。怀疑是只能提取完整且正常的流量。<br>2.4 <del>之后再写吧</del></li>
 </ol>
 <hr>
+<h2 id="参考资源"><a href="#参考资源" class="headerlink" title="参考资源"></a>参考资源</h2><blockquote>
+<p>以下是我搜索得到的几个比较好的文章，时间在2-6年前。</p>
+</blockquote>
+<h3 id="1-从pcaps中提取文件的四种方法"><a href="#1-从pcaps中提取文件的四种方法" class="headerlink" title="1. 从pcaps中提取文件的四种方法"></a>1. <a href="https://www.rubyguides.com/2012/01/four-ways-to-extract-files-from-pcaps/" target="_blank" rel="noopener">从pcaps中提取文件的四种方法</a></h3><blockquote>
+<p>介绍了wireshark，networkminer，chaosreader的提取文件的简单用法</p>
+</blockquote>
+<h3 id="2-返璞归真——流量中提取文件的五种方法"><a href="#2-返璞归真——流量中提取文件的五种方法" class="headerlink" title="2. 返璞归真——流量中提取文件的五种方法"></a>2. <a href="http://blog.sina.com.cn/s/blog_e8e60bc00102vfd9.html" target="_blank" rel="noopener">返璞归真——流量中提取文件的五种方法</a></h3><blockquote>
+<p>阿里云安全大佬写的博客，介绍了tcpxtract，networkminer，wireshark，foremost，chaosreader这五种工具的简单使用。</p>
+</blockquote>
+<h3 id="3-从网络流量捕获（PCAP）中提取文件需要科学上网"><a href="#3-从网络流量捕获（PCAP）中提取文件需要科学上网" class="headerlink" title="3. 从网络流量捕获（PCAP）中提取文件需要科学上网"></a>3. <a href="http://www.behindthefirewalls.com/2014/01/extracting-files-from-network-traffic-pcap.html" target="_blank" rel="noopener">从网络流量捕获（PCAP）中提取文件<sup>需要科学上网</sup></a></h3><blockquote>
+<p>简单介绍了wireshark，networkminer，foremost的使用。</p>
+</blockquote>
+<h3 id="4-蓝队基础-PCAP文件提取"><a href="#4-蓝队基础-PCAP文件提取" class="headerlink" title="4. 蓝队基础-PCAP文件提取"></a>4. <a href="https://www.sneakymonkey.net/2017/03/03/pcap-file-extraction/" target="_blank" rel="noopener">蓝队基础-PCAP文件提取</a></h3><blockquote>
+<p>比较推荐的一篇介绍文章。<br>介绍了wireshark，Bro IDS（目前更名为zeek），networkminer。</p>
+</blockquote>
+<hr>
 <h2 id="常用软件分析"><a href="#常用软件分析" class="headerlink" title="常用软件分析"></a>常用软件分析</h2><hr>
-<h3 id="wireshark-amp-tshark"><a href="#wireshark-amp-tshark" class="headerlink" title="wireshark &amp; tshark"></a>wireshark &amp; tshark</h3><hr>
+<h3 id="wireshark-amp-tshark"><a href="#wireshark-amp-tshark" class="headerlink" title="wireshark &amp; tshark"></a>wireshark &amp; tshark</h3><blockquote>
+<p>一款非常好用的软件，wireshark对于接触过抓包或者流量分析的初学者都是很熟悉的软件。但很少有初学者会使用其文件提取的功能（反正笔者之前是不知道有这个功能的），具体的操作包括<code>文件</code>-&gt;<code>导出对象</code>-&gt;<code>HTTP</code>。<br>就目前来说，wireshark仅支持<code>DICOM</code>，<code>HTTP</code>，<code>IMF</code>，<code>SMB</code>，<code>TFTP</code>五种协议的文件提取，其中的原理尚不清楚，有兴趣的读者可以自行研究，更有兴趣者可以在了解之后发邮件告知我。其中最让我困惑的便是为什么不支持<code>FTP</code>文件的提取。<br>如果有时间且有兴趣的话，我会在之后写一篇关于wireshark更深入的文章来介绍其原理层面的东西。至于其其他的高级用法，我不清楚也暂时用不到。</p>
+<p>Tshark，让你可以在服务器上运行wireshark的部分功能，这里只提文件提取功能。可以说，他就是wireshark的CLI版本。</p>
+</blockquote>
+<p>官方给出的使用说明：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">tshark: &quot;--export-objects&quot; are specified as: &lt;protocol&gt;,&lt;destdir&gt;</span><br><span class="line">tshark: The available export object types for the &quot;--export-objects&quot; option are:</span><br><span class="line">	dicom</span><br><span class="line">	http</span><br><span class="line">	imf</span><br><span class="line">	smb</span><br><span class="line">	tftp</span><br></pre></td></tr></table></figure></p>
+<p>具体的使用方法：<code>tshark -nr test.pcap -q --export-objects http,tmpfolder</code>，其中<code>-r</code>是指定pcap文件输入源，<code>-q</code>是不输出每一个包的信息，<code>--export-objects</code>是指定需要提取文件的协议的类型和输出的目录，其中通过<code>,</code>分隔。</p>
+<p>总之，wireshark具有强大的功能，对于初学者来说，更重要的是清楚他有什么功能以及如何高效使用。对于想了解其原理的大佬来说，感觉是需要看其源码了。不过他的源码是用c编写的，windows上的GUI版本使用了QT开发，总之笔者只是初步看了文件提取的一部分代码，目前还是云里雾里。之后有时间可以再深入了解一下。</p>
+<hr>
 <h3 id="networkminer"><a href="#networkminer" class="headerlink" title="networkminer"></a>networkminer</h3><hr>
 <h3 id="chaosreader"><a href="#chaosreader" class="headerlink" title="chaosreader"></a>chaosreader</h3><hr>
 <h3 id="tcpxtract"><a href="#tcpxtract" class="headerlink" title="tcpxtract"></a>tcpxtract</h3><hr>
@@ -679,7 +702,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#流量提取文件"><span class="nav-number">1.</span> <span class="nav-text">流量提取文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是流量提取文件"><span class="nav-number">1.1.</span> <span class="nav-text">什么是流量提取文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#意义何在"><span class="nav-number">1.2.</span> <span class="nav-text">意义何在</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#研究过程"><span class="nav-number">1.3.</span> <span class="nav-text">研究过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用软件分析"><span class="nav-number">1.4.</span> <span class="nav-text">常用软件分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#wireshark-amp-tshark"><span class="nav-number">1.4.1.</span> <span class="nav-text">wireshark &amp; tshark</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#networkminer"><span class="nav-number">1.4.2.</span> <span class="nav-text">networkminer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chaosreader"><span class="nav-number">1.4.3.</span> <span class="nav-text">chaosreader</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tcpxtract"><span class="nav-number">1.4.4.</span> <span class="nav-text">tcpxtract</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#foremost"><span class="nav-number">1.4.5.</span> <span class="nav-text">foremost</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pcapfex"><span class="nav-number">1.4.6.</span> <span class="nav-text">pcapfex</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#流量提取文件"><span class="nav-number">1.</span> <span class="nav-text">流量提取文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是流量提取文件"><span class="nav-number">1.1.</span> <span class="nav-text">什么是流量提取文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#意义何在"><span class="nav-number">1.2.</span> <span class="nav-text">意义何在</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#研究过程"><span class="nav-number">1.3.</span> <span class="nav-text">研究过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资源"><span class="nav-number">1.4.</span> <span class="nav-text">参考资源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-从pcaps中提取文件的四种方法"><span class="nav-number">1.4.1.</span> <span class="nav-text">1. 从pcaps中提取文件的四种方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-返璞归真——流量中提取文件的五种方法"><span class="nav-number">1.4.2.</span> <span class="nav-text">2. 返璞归真——流量中提取文件的五种方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-从网络流量捕获（PCAP）中提取文件需要科学上网"><span class="nav-number">1.4.3.</span> <span class="nav-text">3. 从网络流量捕获（PCAP）中提取文件需要科学上网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-蓝队基础-PCAP文件提取"><span class="nav-number">1.4.4.</span> <span class="nav-text">4. 蓝队基础-PCAP文件提取</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用软件分析"><span class="nav-number">1.5.</span> <span class="nav-text">常用软件分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#wireshark-amp-tshark"><span class="nav-number">1.5.1.</span> <span class="nav-text">wireshark &amp; tshark</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#networkminer"><span class="nav-number">1.5.2.</span> <span class="nav-text">networkminer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chaosreader"><span class="nav-number">1.5.3.</span> <span class="nav-text">chaosreader</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tcpxtract"><span class="nav-number">1.5.4.</span> <span class="nav-text">tcpxtract</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#foremost"><span class="nav-number">1.5.5.</span> <span class="nav-text">foremost</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pcapfex"><span class="nav-number">1.5.6.</span> <span class="nav-text">pcapfex</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
